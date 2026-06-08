@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To Lessons Page</title>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#7e22ce);
+    color:white;
+    min-height:100vh;
+}
+
+/* Navbar */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+}
+
+.navbar h1{
+    font-size:2rem;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#38bdf8;
+}
+
+/* Hero */
+
+.hero{
+    text-align:center;
+    padding:70px 20px;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    opacity:0.9;
+}
+
+/* Lessons */
+
+.lessons{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding-bottom:60px;
+}
+
+.lesson-card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.lesson-card:hover{
+    transform:translateY(-8px);
+}
+
+.lesson-card h2{
+    margin-bottom:15px;
+}
+
+.lesson-card p{
+    margin-bottom:20px;
+}
+
+.lesson-card a{
+    display:inline-block;
+    text-decoration:none;
+    background:white;
+    color:#2563eb;
+    padding:10px 20px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:rgba(0,0,0,0.2);
+}
+
+.lessons{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:25px;
+}
+
+@media (max-width:768px){
+    .lessons{
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+@media (max-width:500px){
+    .lessons{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <h1>Coders</h1>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">Lessons</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Here Are Your Lessons</h1>
+        <p>Watch Carefully, Practice Daily, and Build Amazing Projects.</p>
+    </section>
+
+    <section class="lessons">
+
+        <div class="lesson-card">
+            <h2>HTML</h2>
+            <p>Learn the structure of websites.</p>
+            <a href="https://www.youtube.com/watch?v=HcOc7P5BMi4" target="_blank">Watch Lesson</a>
+        </div>
+
+        <div class="lesson-card">
+            <h2>CSS</h2>
+            <p>Learn styling and layouts.</p>
+            <a href="https://www.youtube.com/watch?v=ESnrn1kAD4E" target="_blank">Watch Lesson</a>
+        </div>
+
+        <div class="lesson-card">
+            <h2>JavaScript</h2>
+            <p>Make websites interactive.</p>
+            <a href="https://www.youtube.com/watch?v=VlPiVmYuoqw" target="_blank">Watch Lesson</a>
+        </div>
+
+        <div class="lesson-card">
+            <h2>Python</h2>
+            <p>Learn programming fundamentals.</p>
+            <a href="https://www.youtube.com/watch?v=ERCMXc8x7mc" target="_blank">Watch Lesson</a>
+        </div>
+
+        <div class="lesson-card">
+            <h2>Java</h2>
+            <p>Build powerful applications.</p>
+            <a href="https://www.youtube.com/watch?v=UmnCZ7-9yDY" target="_blank">Watch Lesson</a>
+        </div>
+
+        <div class="lesson-card">
+            <h2>C</h2>
+            <p>Learn the fundamentals of programming and problem solving.</p>
+            <a href="https://www.youtube.com/watch?v=irqbmMNs2Bo" target="_blank">Watch Lesson</a>
+</div>
+    </section>
+
+    <footer>
+        <p>Enjoy Learning Programming Languages And Building Amazing Projects.</p>
+        <p>&copy; 2026 Coders. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

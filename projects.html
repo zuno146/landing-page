@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coder Projects Hub</title>
+
+<style>
+    .navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    height: 50px;
+}
+
+
+.navbar h1{
+    font-size:2rem;
+    margin-top: 15px;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#38bdf8;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:#fff;
+    padding:20px;
+}
+
+/* Header */
+h1{
+    text-align:center;
+    margin-bottom:20px;
+    color:#38bdf8;
+}
+
+/* Search box */
+input{
+    width:100%;
+    padding:12px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:8px;
+    outline:none;
+    font-size:16px;
+}
+
+/* Details box styling */
+details{
+    background:#1e293b;
+    margin-bottom:10px;
+    padding:15px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+details:hover{
+    transform:scale(1.01);
+    background:#273449;
+}
+
+summary{
+    font-size:18px;
+    font-weight:bold;
+    color:#38bdf8;
+    cursor:pointer;
+}
+
+/* list */
+ul{
+    margin-top:10px;
+    padding-left:20px;
+}
+
+li{
+    padding:6px 0;
+    transition:0.3s;
+}
+
+li:hover{
+    color:#38bdf8;
+    transform:translateX(5px);
+}
+
+/* footer */
+footer{
+    margin-top:30px;
+    text-align:center;
+    color:#94a3b8;
+}
+</style>
+</head>
+
+<body>
+        <nav class="navbar">
+        <h1>Coders</h1>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">Projects</a>
+        </div>
+    </nav>
+
+<h1>🚀 Coder Projects Hub</h1>
+
+<input type="text" id="search" placeholder="Search projects...">
+
+<div id="projects">
+
+<details>
+<summary>HTML Projects</summary>
+<ul>
+<li>🌐 Personal Portfolio Website</li>
+<li>🍔 Restaurant Website</li>
+<li>🎓 Coders Landing Page</li>
+</ul>
+</details>
+
+<details>
+<summary>CSS Projects</summary>
+<ul>
+<li>🎨 Animated Navigation Bar</li>
+<li>🖼️ Responsive Photo Gallery</li>
+<li>💳 Modern Pricing Card</li>
+</ul>
+</details>
+
+<details>
+<summary>JavaScript Projects</summary>
+<ul>
+<li>🧮 Calculator</li>
+<li>⏰ Digital Clock</li>
+<li>✅ To-Do List App</li>
+</ul>
+</details>
+
+<details>
+<summary>Python Projects</summary>
+<ul>
+<li>🧮 Password Generator</li>
+<li>📊 Student Marks Calculator</li>
+<li>🎮 Rock Paper Scissors</li>
+</ul>
+</details>
+
+<details>
+<summary>Java Projects</summary>
+<ul>
+<li>🎮 Number Guessing Game</li>
+<li>📋 Student Management System</li>
+<li>📚 Library Management System</li>
+</ul>
+</details>
+
+<details>
+<summary>C Projects</summary>
+<ul>
+<li>🔢 Even/Odd + Prime Checker</li>
+<li>🧾 Simple ATM System</li>
+<li>🧮 Matrix Addition & Subtraction</li>
+</ul>
+</details>
+
+</div>
+
+<footer>
+<p>Enjoy Learning Programming & Building Projects 🚀</p>
+<p>&copy; 2026 Coders. All Rights Reserved.</p>
+</footer>
+
+<script>
+// 🔥 SEARCH FILTER FEATURE
+let search = document.getElementById("search");
+
+search.addEventListener("keyup", function(){
+    let value = this.value.toLowerCase();
+    let details = document.querySelectorAll("details");
+
+    details.forEach(d => {
+        if(d.innerText.toLowerCase().includes(value)){
+            d.style.display = "block";
+        } else {
+            d.style.display = "none";
+        }
+    });
+});
+</script>
+
+</body>
+</html>

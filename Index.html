@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coders | Learn Programming</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f4f7fc;
+            color:#333;
+            line-height:1.6;
+        }
+
+        /* Hero Section */
+        .hero{
+            height:100vh;
+            background:linear-gradient(135deg,#2563eb,#1e40af);
+            color:white;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            padding:20px;
+        }
+
+        .hero h1{
+            font-size:4rem;
+            margin-bottom:15px;
+        }
+
+        .hero p{
+            font-size:1.2rem;
+            max-width:600px;
+            margin-bottom:25px;
+        }
+
+        .btn{
+            text-decoration:none;
+            color:#2563eb;
+            background:white;
+            padding:12px 30px;
+            border-radius:30px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            transform:translateY(-3px);
+        }
+
+        /* Sections */
+        section{
+            padding:70px 10%;
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom:30px;
+            color:#2563eb;
+        }
+
+        /* Features */
+        .features{
+            display:flex;
+            justify-content:center;
+            gap:25px;
+            flex-wrap:wrap;
+        }
+
+        .feature-card{
+            background:white;
+            width:250px;
+            padding:25px;
+            border-radius:15px;
+            text-align:center;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Courses */
+        .courses{
+            display:grid;
+            grid-template-columns:repeat(3, 1fr);
+            gap:20px;
+        }
+
+        .course{
+            background:white;
+            padding:20px;
+            text-align:center;
+            border-radius:12px;
+            font-weight:bold;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        footer{
+            background:#1e293b;
+            color:white;
+            text-align:center;
+            padding:25px;
+            margin-top:40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Welcome To Coders</h1>
+
+        <p>
+            Learn programming languages from beginner to advanced level
+            through easy lectures and practical projects.
+        </p>
+
+        <a href="coders.html" class="btn">Start Learning</a>
+    </header>
+
+    <!-- Features Section -->
+    <section>
+        <h2>Why Learn With Us?</h2>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>Easy Lectures</h3>
+                <p>Simple and beginner-friendly lessons.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Practical Projects</h3>
+                <p>Build real-world projects while learning.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Step-by-Step Learning</h3>
+                <p>Learn at your own pace with guidance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section>
+        <h2>Courses We Provide</h2>
+
+        <div class="courses">
+            <div class="course">HTML</div>
+            <div class="course">CSS</div>
+            <div class="course">JavaScript</div>
+            <div class="course">Python</div>
+            <div class="course">Java</div>
+            <div class="course">C</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Enjoy Learning Programming Languages And Building Amazing Projects.</p>
+        <p>&copy; 2026 Coders. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

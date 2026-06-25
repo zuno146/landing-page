@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Coders | Contact Form</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#2563eb,#1e40af,#7e22ce);
+    color:white;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.navbar h1{
+    color:white;
+    font-size:2rem;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:1.1rem;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#38bdf8;
+}
+
+/* form card */
+
+form{
+    width:400px;
+    padding:35px;
+    background:white;
+    border-radius:20px;
+}
+
+
+/* heading */
+
+h1{
+    text-align:center;
+    color:#1e40af;
+    margin-bottom:10px;
+}
+
+
+h2{
+    text-align:center;
+    font-size:15px;
+    color:black;
+    margin-bottom:25px;
+}
+
+
+
+/* inputs */
+
+input{
+    width:100%;
+    padding:13px;
+    margin:12px 0;
+    border-radius:10px;
+    border:2px solid grey;
+    outline:none;
+    background:white;
+    color:black;
+    font-size:15px;
+}
+
+
+input:focus{
+    border:2px solid #00eaff;
+}
+
+
+
+/* password eye */
+
+.password-box{
+    position:relative;
+}
+
+
+#eye{
+    position:absolute;
+    right:15px;
+    top:22px;
+    cursor:pointer;
+}
+
+
+
+/* date heading */
+
+div h1{
+    font-size:18px;
+    margin-top:15px;
+    color: black;
+}
+
+
+
+/* button */
+
+button{
+
+    width:100%;
+    padding:13px;
+    margin-top:15px;
+
+    background:#1e40af;
+    color:white;
+
+    border:none;
+    border-radius:30px;
+
+    font-size:18px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+
+button:hover{
+
+    background:darkblue;
+    box-shadow:0 0 20px #00eaff;
+
+    transform:translateY(-3px);
+
+}
+footer{
+    text-align:center;
+    color:white;
+    padding:25px;
+    background:rgba(0,0,0,0.2);
+    border-top:1px solid rgba(255,255,255,0.1);
+}
+
+footer p{
+    margin:5px 0;
+}
+.container{
+    min-height:calc(100vh - 160px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+</style>
+
+</head>
+
+
+<body>
+        <nav class="navbar">
+        <h1>Coders</h1>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="lessons.html">Lessons</a>
+            <a href="projects.html">Projects</a>
+
+        </div>
+    </nav>
+<div class="container">
+<form onsubmit="return validateform()">
+
+
+<h1>Coders Contact Form</h1>
+
+<h2>Please Contact Us By This Form</h2>
+
+
+<input type="text" placeholder="Enter Your Name" required>
+
+
+<div class="password-box">
+
+<input type="password" id="password" placeholder="Enter Password" required>
+
+<span id="eye">👁️</span>
+
+</div>
+
+
+
+<input type="email" placeholder="Enter Your Email" required>
+
+
+<input type="tel" placeholder="Enter Your Phone Number" required>
+
+
+
+<div>
+
+<h1>Enter Your Birth Date</h1>
+
+<input type="date" required>
+
+</div>
+
+
+
+<button type="submit">Contact</button>
+
+
+</form>
+</div>
+    <footer>
+        <p>Enjoy Learning Programming Languages And Building Amazing Projects.</p>
+        <p>&copy; 2026 Coders. All Rights Reserved.</p>
+    </footer>
+
+
+
+
+
+</body>
+<script>
+
+let eye = document.getElementById("eye");
+let password = document.getElementById("password");
+
+
+eye.onclick=function(){
+
+if(password.type==="password"){
+    password.type="text";
+    eye.innerHTML="🙈";
+}
+
+else{
+    password.type="password";
+    eye.innerHTML="👁️";
+}
+
+}
+
+
+function validateform(){
+
+alert("Your Message Has Been Sent Successfully 🚀");
+
+return true;
+
+}
+
+</script>
+</html>

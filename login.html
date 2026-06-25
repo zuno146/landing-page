@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Coders Login</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#2563eb,#1e40af,#7e22ce);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+/* Login Box */
+
+.login-box{
+
+    width:380px;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.3);
+    text-align:center;
+
+}
+
+
+/* Heading */
+
+.login-box h1{
+    color:#2563eb;
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+
+.login-box h2{
+    color:#333;
+    margin-bottom:25px;
+}
+
+
+
+/* Inputs */
+
+input{
+
+    width:100%;
+    padding:14px;
+    margin:12px 0;
+
+    border-radius:10px;
+    border:1px solid #ccc;
+
+    outline:none;
+    font-size:15px;
+}
+
+
+input:focus{
+    border-color:#2563eb;
+}
+
+
+
+/* Forgot Password */
+
+.forgot{
+
+    display:block;
+    text-align:right;
+    margin:8px 0 20px;
+
+    text-decoration:none;
+    color:#2563eb;
+    font-size:14px;
+    margin-right: 95px;
+
+}
+
+
+/* Button */
+
+button{
+
+    width:100%;
+    padding:14px;
+
+    border:none;
+    border-radius:30px;
+
+    background:#2563eb;
+    color:white;
+
+    font-size:17px;
+    font-weight:bold;
+
+    cursor:pointer;
+    transition:0.3s;
+
+}
+
+
+button:hover{
+
+    background:#1e40af;
+    transform:translateY(-3px);
+
+}
+.password-box{
+    position:relative;
+}
+
+
+.password-box input{
+    padding-right:45px;
+}
+
+
+#eye{
+    position:absolute;
+    right:15px;
+    top:25px;
+    cursor:pointer;
+    font-size:20px;
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="login-box">
+
+
+<h1>Coders</h1>
+
+<h2>Login</h2>
+
+
+<form id="loginForm">
+
+
+<input type="email" id="email" placeholder="Enter Email">
+
+
+<div class="password-box">
+
+<input type="password" id="password" placeholder="Enter Password">
+
+<span id="eye">👁️</span>
+
+</div>
+
+
+<a href="forgot .html" class="forgot">
+Forgot Password?
+</a>
+
+
+<button type="submit">
+Login
+</button>
+
+</p>
+<p id="message"></p>
+
+
+</form>
+
+
+</div>
+
+
+</body>
+<script>
+
+const form = document.getElementById("loginForm");
+
+let allowLogin = false;
+
+
+form.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    let message = document.getElementById("message");
+
+
+    if(email === "" && password === ""){
+
+        message.innerHTML = "⚠️ Please enter email and password";
+        message.style.color = "red";
+
+        allowLogin = false;
+
+    }
+
+    else if(email === ""){
+
+        message.innerHTML = "⚠️ Please enter your email";
+        message.style.color = "red";
+
+        allowLogin = false;
+
+    }
+
+    else if(password === ""){
+
+        message.innerHTML = "⚠️ Please enter your password";
+        message.style.color = "red";
+
+        allowLogin = false;
+
+    }
+
+    else if(!allowLogin){
+
+        message.innerHTML = "✅ Login Successful. Click Login again to start learning";
+        message.style.color = "green";
+
+        allowLogin = true;
+
+    }
+
+    else{
+
+        window.location.href = "coders.html";
+
+    }
+
+
+});
+const password = document.getElementById("password");
+const eye = document.getElementById("eye");
+
+
+eye.addEventListener("click", function(){
+
+    password.type = "text";
+
+    eye.innerHTML = "🙈";
+
+
+    setTimeout(function(){
+
+        password.type = "password";
+
+        eye.innerHTML = "👁️";
+
+    },1000);
+
+
+});
+
+</script>
+</html>
